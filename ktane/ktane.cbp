@@ -33,21 +33,25 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="button.hpp" />
+		<Unit filename="buttonSettings.txt" />
 		<Unit filename="complicatedWires.hpp" />
 		<Unit filename="config.hpp" />
+		<Unit filename="configuration.hpp" />
 		<Unit filename="egg.hpp" />
 		<Unit filename="game.hpp" />
 		<Unit filename="leaderboard.hpp" />
+		<Unit filename="leaderboard.txt" />
 		<Unit filename="main.cpp" />
 		<Unit filename="needyModule.hpp" />
 		<Unit filename="occurance.hpp" />
-		<Unit filename="player.hpp" />
+		<Unit filename="players.txt" />
 		<Unit filename="regularWires.hpp" />
 		<Unit filename="sequenceWires.hpp" />
 		<Unit filename="settings.hpp" />
 		<Unit filename="simonSays.hpp" />
-		<Unit filename="time.hpp" />
+		<Unit filename="timer.hpp" />
 		<Unit filename="up.hpp" />
+		<Unit filename="user.hpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

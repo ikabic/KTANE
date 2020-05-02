@@ -1,6 +1,8 @@
 #ifndef UP_HPP_INCLUDED
 #define UP_HPP_INCLUDED
 
+#include "needyModule.hpp"
+
 class Up:public NeedyModule{
 protected:
     Direction pointer;

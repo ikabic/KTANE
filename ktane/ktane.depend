@@ -4,3 +4,74 @@
 	<time.h>
 	<windows.h>
 
+1588459085 source:c:\users\ivona\documents\github\ktane\ktane\main.cpp
+	<iostream>
+	<time.h>
+	<windows.h>
+	<fstream>
+	<vector>
+	<stdlib.h>
+	"button.hpp"
+	"complicatedWires.hpp"
+	"config.hpp"
+	"configuration.hpp"
+	"egg.hpp"
+	"game.hpp"
+	"leaderboard.hpp"
+	"needyModule.hpp"
+	"occurance.hpp"
+	"player.hpp"
+	"regularWires.hpp"
+	"sequenceWires.hpp"
+	"settings.hpp"
+	"simonSays.hpp"
+	"timer.hpp"
+	"up.hpp"
+	"user.hpp"
+
+1588439179 c:\users\ivona\documents\github\ktane\ktane\button.hpp
+	"timer.hpp"
+
+1588449009 c:\users\ivona\documents\github\ktane\ktane\timer.hpp
+
+1588439223 c:\users\ivona\documents\github\ktane\ktane\complicatedwires.hpp
+	"regularWires.hpp"
+
+1588439236 c:\users\ivona\documents\github\ktane\ktane\regularwires.hpp
+
+1588438603 c:\users\ivona\documents\github\ktane\ktane\config.hpp
+	"configuration.hpp"
+
+1588439082 c:\users\ivona\documents\github\ktane\ktane\up.hpp
+	"needyModule.hpp"
+
+1588442138 c:\users\ivona\documents\github\ktane\ktane\needymodule.hpp
+	"timer.hpp"
+
+1588389728 c:\users\ivona\documents\github\ktane\ktane\time.hpp
+
+1588438565 c:\users\ivona\documents\github\ktane\ktane\configuration.hpp
+
+1588439068 c:\users\ivona\documents\github\ktane\ktane\egg.hpp
+	"needyModule.hpp"
+
+1588459204 c:\users\ivona\documents\github\ktane\ktane\game.hpp
+	"settings.hpp"
+
+1588440939 c:\users\ivona\documents\github\ktane\ktane\player.hpp
+
+1588439438 c:\users\ivona\documents\github\ktane\ktane\settings.hpp
+
+1588458742 c:\users\ivona\documents\github\ktane\ktane\leaderboard.hpp
+	"user.hpp"
+
+1588438624 c:\users\ivona\documents\github\ktane\ktane\occurance.hpp
+
+1588439453 c:\users\ivona\documents\github\ktane\ktane\sequencewires.hpp
+	"regularWires.hpp"
+
+1588442197 c:\users\ivona\documents\github\ktane\ktane\simonsays.hpp
+
+1588458915 c:\users\ivona\documents\github\ktane\ktane\user.hpp
+	"timer.hpp"
+

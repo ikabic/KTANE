@@ -1,6 +1,8 @@
 #ifndef CONFIG_HPP_INCLUDED
 #define CONFIG_HPP_INCLUDED
 
+#include "configuration.hpp"
+
 class Config{
 protected:
     Configuration up[2];

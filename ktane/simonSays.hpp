@@ -3,10 +3,10 @@
 
 class SimonSays{
 protected:
-    int stageNumber;
+    static int stageNumber;
     int currentStage;
-    Colours blinkingColour[stageNumber];
-    Colours correctSequence[stageNumber];
+    vector <Colours> blinkingColour;
+    vector <Colours> correctSequence;
 public:
 };
 
