@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588380403 source:c:\users\ivona\desktop\ktane\main.cpp
+	<iostream>
+	<time.h>
+	<windows.h>
+
