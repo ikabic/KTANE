@@ -4,13 +4,15 @@
 	<time.h>
 	<windows.h>
 
-1588459085 source:c:\users\ivona\documents\github\ktane\ktane\main.cpp
+1588526091 source:c:\users\ivona\documents\github\ktane\ktane\main.cpp
 	<iostream>
 	<time.h>
 	<windows.h>
 	<fstream>
 	<vector>
 	<stdlib.h>
+	<iomanip>
+	<thread>
 	"button.hpp"
 	"complicatedWires.hpp"
 	"config.hpp"
@@ -29,10 +31,11 @@
 	"up.hpp"
 	"user.hpp"
 
-1588439179 c:\users\ivona\documents\github\ktane\ktane\button.hpp
+1588526774 c:\users\ivona\documents\github\ktane\ktane\button.hpp
 	"timer.hpp"
+	"game.hpp"
 
-1588449009 c:\users\ivona\documents\github\ktane\ktane\timer.hpp
+1588525769 c:\users\ivona\documents\github\ktane\ktane\timer.hpp
 
 1588439223 c:\users\ivona\documents\github\ktane\ktane\complicatedwires.hpp
 	"regularWires.hpp"
@@ -55,7 +58,7 @@
 1588439068 c:\users\ivona\documents\github\ktane\ktane\egg.hpp
 	"needyModule.hpp"
 
-1588459204 c:\users\ivona\documents\github\ktane\ktane\game.hpp
+1588515957 c:\users\ivona\documents\github\ktane\ktane\game.hpp
 	"settings.hpp"
 
 1588440939 c:\users\ivona\documents\github\ktane\ktane\player.hpp

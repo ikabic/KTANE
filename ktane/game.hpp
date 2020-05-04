@@ -10,12 +10,12 @@ protected:
     int earnedPoints;
     Settings gameSettings;
     int strikes;
-    int serialNumber;
+    string serialNumber;
     int batteries;
     bool port;
     bool needyModule;
 public:
-    Game(int serialNumber1, int batteries1, bool port1, bool needyModule1, Difficulty difficulty1, int hour1, int minute1, int second1, int moduleNumber1, int points1 = 0, int finishedModuleNumber1 = 0, int strikes1 = 0)
+    Game(string serialNumber1, int batteries1, bool port1, bool needyModule1, Difficulty difficulty1, int hour1, int minute1, int second1, int moduleNumber1, int points1 = 0, int finishedModuleNumber1 = 0, int strikes1 = 0)
     :gameSettings(difficulty1, hour1, minute1, second1){
         moduleNumber = moduleNumber1;
         finishedModuleNumber = finishedModuleNumber1;
@@ -26,6 +26,11 @@ public:
         needyModule = needyModule1;
         earnedPoints = points1;
     }
+
+    int getBatteries(){return batteries;}
+    bool getPort(){return port;}
+    int getStrikes(){return strikes;}
+    string getSerialNumber(){return serialNumber;}
 };
 
 #endif // GAME_HPP_INCLUDED

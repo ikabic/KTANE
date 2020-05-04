@@ -3,9 +3,9 @@
 #include <windows.h>
 #include <fstream>
 #include <vector>
-//#include <sstream>
-//#include <string>
 #include <stdlib.h>
+#include <iomanip>
+#include <thread>
 
 #include "button.hpp"
 #include "complicatedWires.hpp"
@@ -46,7 +46,7 @@ int randomise(int a, int b){
     return a + (rand() % ( b - a + 1));
 }
 
-Colours getColour(int a, int b){
+Colours getRandomColour(int a, int b){
     int x = randomise(a,b);
     switch(x){
     case 1: return green;
@@ -59,7 +59,7 @@ Colours getColour(int a, int b){
     }
 }
 
-ButtonText getText(int a, int b){
+ButtonText getRandomButtonText(int a, int b){
     int x = randomise(a,b);
     switch(x){
     case 1: return DETONATE;
@@ -68,6 +68,31 @@ ButtonText getText(int a, int b){
     case 4: return PRESS;
     default: return ABORT;
     }
+}
+
+ExtraLabel getRandomLabel(int a, int b){
+    int x = randomise(a,b);
+    switch(x){
+    case 1: return FRQ;
+    case 2: return CAR;
+    case 3: return CLR;
+    case 4: return IND;
+    case 5: return FRK;
+    case 6: return SND;
+    case 7: return BOB;
+    case 8: return NO;
+    default: return NO;
+    }
+}
+
+Difficulty getRandomDifficulty(int a, int b){
+   int x = randomise(a,b);
+   switch(x){
+   case 1: return easy;
+   case 2: return normal;
+   case 3: return hard;
+   default: return easy;
+   }
 }
 
 void copyForButton(int lineNumber, string* copiedLine1, string* copiedLine2){
@@ -97,14 +122,58 @@ void wrongInput(){
     system("cls");
 }
 
+void printEssential(Game &g){
+    cout << "Serial number: " << g.getSerialNumber() << endl;
+    cout << "Number of batteries: " << g.getBatteries() << endl;
+    cout << "Port: ";
+    if(!g.getPort()) cout << "no" << endl;
+    else cout << "yes" << endl;
+    cout << "Number of strikes: " << g.getStrikes() << endl;
+}
+
 void menu(){
     cout << "Game menu" << endl; textcolor(4);
     cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" << endl; textcolor(7);
     cout << "1.  Play                2.  Exit                3.  Leaderboard" << endl << "> ";
+    int input;
+    cin >> input;
+    if(input == 1){}
+    if(input == 2){return;}
+    if(input == 3){}
+}
+
+void stageComplete(){
+    system("cls");
+    textcolor(10);
+    cout << "Stage complete.";
+    textcolor(7);
+    Sleep(500);
+    system("cls");
 }
 
 void startGame(){
     ///Game(? , randomise(0,6), randomise(0,1), randomise(0,1), randomise(1,3), 0, 0, 0, 0);
+}
+
+void gameOver(Timer &t){
+    textcolor(4);
+    system("cls");
+    cout << "boom";
+    Sleep(500);
+    system("cls");
+    cout << "Game over." << endl;
+    textcolor(7);
+    cout << "Time remaining: " << t.getH() << ":" << t.getM() << ":" << t.getS() << endl;
+    textcolor(4);
+    cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" << endl;
+    textcolor(7);
+    cout << "Would you like to play a new game or go back to the menu?" << endl << "1.  Try again           2.  Go back" << endl << "> ";
+    int x;
+    cin >> x;
+    system("cls");
+    if(x == 1){startGame();}
+    if(x == 2){menu();}
+    exit(4);
 }
 
 void start(){
@@ -121,10 +190,6 @@ void start(){
         wrongInput();
         start();}
     menu();
-    cin >> input;
-    if(input == 1){}
-    if(input == 2){return;}
-    if(input == 3){}
 }
 
 int main()
@@ -132,6 +197,9 @@ int main()
     srand((unsigned)time(NULL));
     string buttonFile = "buttonSettings.txt";
     string playerList = "players.txt";
-    start();
+    //start();
+    Game g ("3GFDSGF3", randomise(0,6), randomise(0,1), randomise(0,1), getRandomDifficulty(1,3), 0, 0, 0, 0);
+    Timer t(0,1,5);
+    playButton(g,t);
     return 0;
 }
